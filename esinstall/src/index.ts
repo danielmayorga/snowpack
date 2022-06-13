@@ -14,6 +14,7 @@ import {rollupPluginAlias} from './rollup-plugins/rollup-plugin-alias';
 import {rollupPluginCatchFetch} from './rollup-plugins/rollup-plugin-catch-fetch';
 import {rollupPluginCatchUnresolved} from './rollup-plugins/rollup-plugin-catch-unresolved';
 import {rollupPluginCss} from './rollup-plugins/rollup-plugin-css';
+import rollupPluginImage from '@rollup/plugin-image';
 import {rollupPluginNodeProcessPolyfill} from './rollup-plugins/rollup-plugin-node-process-polyfill';
 import {rollupPluginDependencyStats} from './rollup-plugins/rollup-plugin-stats';
 import {rollupPluginStripSourceMapping} from './rollup-plugins/rollup-plugin-strip-source-mapping';
@@ -330,6 +331,7 @@ ${colors.dim(
         namedExports: true,
       }),
       rollupPluginCss(),
+      rollupPluginImage(),
       rollupPluginReplace({
         preventAssignment: true,
         values: generateReplacements(env),
